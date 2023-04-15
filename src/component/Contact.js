@@ -29,7 +29,6 @@ function Contact() {
         <Wrap>
             {showForm && (
                 <div className="con">
-                    (
                     <form className="form-container">
                         <div className="flex-container">
                             <BsFillPersonFill />
@@ -63,7 +62,6 @@ function Contact() {
                             <input onClick={modalClickEvent} type="submit" />
                         </div>
                     </form>
-                    )
                 </div>
             )}
             <div>

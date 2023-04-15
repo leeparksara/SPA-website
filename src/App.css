@@ -329,6 +329,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10%;
+    padding-bottom: 20%;
 }
 .offers img {
     width: 500px;

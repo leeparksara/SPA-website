@@ -8,15 +8,12 @@ import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import BookingButton from './BookingButton'
 
-
 import SliderContext from './SliderContext'
-
 
 function NavBar() {
     //Bootstrap is used to create nav-bar
     // Click event for the slider component, setting the slider to false when some of the navigation links are clicked
     const { setShowSlider } = useContext(SliderContext)
-
 
     const linkClickEvent = () => {
         setShowSlider(false)
@@ -66,7 +63,7 @@ function NavBar() {
                                                 className="navLink"
                                                 to="/offers"
                                             >
-                                                Special
+                                                Offers
                                             </Link>
                                             <Link
                                                 onClick={linkClickEvent}
