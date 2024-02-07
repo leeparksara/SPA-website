@@ -1,80 +1,111 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Booking from './Booking.tsx'
-import outdoor from '../outdoor.json'
+//import Booking from './Booking.tsx'
+//import outdoor from '../outdoor.json'
 import styled from 'styled-components'
+import { IoIosArrowDown } from 'react-icons/io';
 
-import { BsFillPersonFill } from 'react-icons/bs'
-import { BsFillTelephoneFill } from 'react-icons/bs'
-import { BsEnvelopeFill } from 'react-icons/bs'
 
 // Simple contact form is created with html and css
 // Using local json file again to fetch the titles when user wants to select a spa type during booking
 function Contact() {
-    const [showModal, setShowModal] = useState(false)
-    const [showForm, setShowForm] = useState(true)
-    const modalClickEvent = (event) => {
-        event.preventDefault()
-        setShowModal(true)
-        setShowForm(false)
-    }
+   
+    const [showHiddenDiv, setShowHiddenDiv] = useState(false);
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+        // Adjust the threshold value based on when you want the hidden div to appear
+        if (scrollY > 15) {
+          setShowHiddenDiv(true);
+        } else {
+          setShowHiddenDiv(false);
+        }
+      };
+    
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
-    const [selectSpa, setSelectSpa] = useState([])
 
-    useEffect(() => {
-        setSelectSpa(outdoor)
-    }, [])
-
+    
+      const handleArrowClick = () => {
+        // Scroll down to reveal the hidden div
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: 'smooth', // Add smooth scrolling effect
+        });
+      };
+       
     return (
-        <Wrap>
-            {showForm && (
+        <Wrap className='wrap'>
+        <h1> Contact Us </h1>
+        <IoIosArrowDown className='discover-arrow' onClick={handleArrowClick} />
+            {showHiddenDiv && (
+                <div className='contact-container'>
+                <div>
+                <h2 className='contact-animation'> Get In Touch</h2>
+                </div>
+               
+             
                 <div className="con">
+                <div className='contactt'>
+
+                <h4>Horizon</h4>
+                <p>Gamla Tyresovagen 326. <br></br> Enskededalen
+Stockholm, Sweden 0012
+
+</p>
+<p>010-3456-776</p>
+                </div>
+         
                     <form className="form-container">
+                   
                         <div className="flex-container">
-                            <BsFillPersonFill />
-                            <input type="text" placeholder="First Name" />
-                            <BsFillPersonFill />
-                            <input type="text" placeholder="First Name" />
+                            <label>Name</label>
+                            <input type="text" />
+                           
+                      
                         </div>
 
                         <div className="flex-container">
-                            <BsFillTelephoneFill />
-                            <input type="number" placeholder="Phone Number" />
-                            <BsEnvelopeFill />
-                            <input type="email" placeholder="Email Addres" />
+                            <label>Email Address</label>
+                            <input type="email"  />
                         </div>
 
                         <div className="flex-container">
                             <input type="date" placeholder="Date & Time" />
 
-                            <div>
-                                <select>
-                                    {selectSpa.map((spa) => (
-                                        <option key={spa.id} value={'spa day'}>
-                                            {spa.title}
-                                        </option>
-                                    ))}
-                                </select>
-                            </div>
+                           
+                        </div>
+                        <div className="flex-container">
+                        <label>Reason For Contact</label>
+                            <select  >
+
+                                <option>Make a reservation</option>
+                                <option>Request a pick up service</option>
+                                <option>General question</option>
+                            </select>
                         </div>
 
                         <div className="form-sub">
-                            <input onClick={modalClickEvent} type="submit" />
+                            <input  type="submit" value="Send"/>
                         </div>
                     </form>
+                    
+                </div>
+                <div className='hot-spot'>
+                    <h3>Hot spots around the resort</h3>
+                    <ul>
+                        <li>King River - 5.2 Km (15 min)</li>
+ <li>Stockholm Muesum 3.2 Km (10 min)</li>
+                        <li>The Monkey Forest - 14.4 Km (35 min) </li>
+                    </ul>
+                </div>
                 </div>
             )}
-            <div>
-                {showModal && (
-                    <Booking
-                        className="my-modal"
-                        heading="Are you sure?"
-                        text="Are you sure you want to continue the booking?"
-                        cancel="Cancel"
-                        confirm="Confirm"
-                    />
-                )}
-            </div>
+           
         </Wrap>
     )
 }
@@ -84,16 +115,36 @@ export default Contact
 const Wrap = styled('form')`
     form {
         padding: 30px;
+        
+        background-color:transparent;
     }
     .flex-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
-
+width:400px;
         padding: 2%;
         column-gap: 15px;
+        text-align:left;
+        
     }
-
+    input, select{
+        border-top:none;
+        border-left:none;
+        border-right:none;
+        border-bottom:1px solid #fff;
+        background-color:transparent;
+      color:#fff;
+    }
+    option{
+        color:#000;
+    }
+.form-container{
+    text-align:center;
+    color:#fff;
+    margin-top: 5%;
+  
+}
     input {
         padding: 3px;
     }
@@ -106,12 +157,19 @@ const Wrap = styled('form')`
         margin-top: 10px;
     }
     .form-sub input {
-        background-color: #0092ca;
+        
         border: none;
         border-radius: 3px;
         width: 80px;
         font-size: large;
-        padding: 5px;
+        padding: 10px;
         color: white;
+        margin-left:180px;
+    }
+    
+    h1{
+        color:#fff;
+      margin-top:15%;
+
     }
 `

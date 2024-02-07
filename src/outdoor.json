@@ -1,41 +1,14 @@
 [
     {
         "id": 1,
-        "pic": "https://images.unsplash.com/photo-1586495985096-787fb4a54ac0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        "title": "Glamping ",
-        "price": "500 USD"
+        "pic": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": " The Lotus Chakra ",
+        "para": "Our lotus chakra massage is the perfect way to realse stress and gain energy"
     },
     {
         "id": 2,
-        "pic": "https://images.unsplash.com/flagged/photo-1573648817925-1ce7b75c049c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80",
-        "title": "Floating Breakfast",
-        "price": "300 USD"
-    },
-
-    {
-        "id": 3,
-        "pic": "https://images.unsplash.com/photo-1573067705784-c377ccd932eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        "title": "Champagne & Bath",
-        "price": "400 USD"
-    },
-
-    {
-        "id": 4,
-        "pic": "https://images.unsplash.com/photo-1587064589724-d781a8dd50ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
-        "title": "Golden Hour",
-        "price": "600 USD"
-    },
-    {
-        "id": 5,
-        "pic": "https://images.unsplash.com/photo-1648648777042-a7567bb7668d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-        "title": "Sunset ",
-        "price": "600 USD"
-    },
-
-    {
-        "id": 6,
-        "pic": "https://images.unsplash.com/photo-1519868343531-805e97cbda3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-        "title": "Therma Spa",
-        "price": "600 USD"
+        "pic": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "Magical holistic massage",
+        "para": "Our magical massage is the done in the old holistic asian way"
     }
 ]
