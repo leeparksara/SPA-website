@@ -9,6 +9,9 @@ import Table from './component/Table'
 import Footer from './component/Footer';
 import NavBar from './component/NavBar';
 import Search from './component/Search';
+import Delux from './component/Delux'
+import OneBedRoom from './component/OneBedRoom';
+import TwoBedRoom from './component/TwoBedRoom';
 function App() {
   return (
     <div className="app-container">
@@ -21,6 +24,10 @@ function App() {
 <Route path='/search' element={<Search/>} />
         <Route path="/outdoorspa" element={<OutdoorSpa />} />
         <Route path="/discover" element={<Discover />} />
+        <Route path="/delux" element={<Delux />} />
+     
+<Route path="/one-bedroom" element={<OneBedRoom />} />
+<Route path="/two-bedroom" element={<TwoBedRoom />} />
       </Routes>
       <div className="footer-con">
         <Footer />
