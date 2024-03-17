@@ -1,11 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/din-regular');
 
-body{
-    font-family: "Work Sans"}
-.App {
-    text-align: center;
-    overflow: hidden;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .App-header {
     background-color: #282c34;
@@ -41,8 +38,12 @@ body{
  
 }
 body {
-    font-family: 'DIN-Reguslar', sans-serif;
+  
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
     overflow-x: scroll;
+  
     background-color: #e5e5e5;
 }
 
@@ -390,16 +391,17 @@ margin-left: 50px;
 }
 
 .hero-text{
-    color: #fff;
+    color: #ffffffd1;
     text-align: center;
-    font-family: "Bree Serif", serif;
+    font-size: 40px;
    
     
 }
 .hero-text2{
-    color: #fff;
+    color: #ffffffd8;
     text-align: center;
-    font-size: large;
+    font-weight:normal;
+    font-size: 22px;
 }
 
 .slide-title{
@@ -450,37 +452,13 @@ margin-left: 50px;
 
 
 
-.search-bar{
-    width: 90%;
-    height: 180px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 10px;
-   
-}
-.select{
-    display: flex;
-    flex-direction: column;
-   width: 200px;
-row-gap: 10px;
-}
 
-.submit{
-   background-color:#3badcc;
-    border: none;
-    color: #fff;
-    width: 110px;
-    height: 50px;
-    border-radius: 5px;
-}
 
 
 .con4{
     display: flex;
    
-   margin-top: 13%;
+   margin-top: 8%;
     justify-content: center;
 }
 
@@ -1041,4 +1019,25 @@ color: #3badcc;
 .com{
     background-color: #046daf;
     color: #812a2a;
+}
+
+@media (max-width: 768px) {
+
+
+    .hero-text{
+        color: #ffffffd1;
+     
+        font-size: 25px;
+       
+        
+    }
+    .hero-text2{
+        color: #ffffffd8;
+      
+        font-weight:normal;
+        font-size: 15px;
+       
+    }
+    
+
 }

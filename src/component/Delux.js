@@ -10,6 +10,7 @@ function Discover() {const [showHiddenDiv, setShowHiddenDiv] = useState(false);
 const [adults, setAdults] = useState(1);
 const [childd, setChildd] = useState(1);
 
+
   const handleScroll = () => {
     const scrollY = window.scrollY;
     // Adjust the threshold value based on when you want the hidden div to appear

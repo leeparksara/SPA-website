@@ -8,7 +8,7 @@ import { PiImageThin } from "react-icons/pi";
 
 function Discover() {const [showHiddenDiv, setShowHiddenDiv] = useState(false);
 const [adults, setAdults] = useState(1);
-const [childd, setChildd] = useState(1);
+const [childd, setChildd] = useState(0);
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
@@ -32,6 +32,8 @@ const [childd, setChildd] = useState(1);
     window.scrollTo({
       top: window.innerHeight,
       behavior: 'smooth', // Add smooth scrolling effect
+
+      
     });
   }; 
 
@@ -53,6 +55,7 @@ const [childd, setChildd] = useState(1);
   const handleIncrement = () => {
     setAdults(adults +1);
   }
+  
 
   const handleDecrement =() => {
     if (adults > 1) {

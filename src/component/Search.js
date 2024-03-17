@@ -1,8 +1,8 @@
 import React from 'react'
-
+import styled from 'styled-components';
 function Search() {
   return (
-    <div className='search-bar'>
+    <SearchBar className='search-bar'>
 
 
       <div className='select'>
@@ -37,8 +37,61 @@ function Search() {
         </select>
       </div>
       <input className='submit' type='submit' value='Search'/>
-    </div>
+    </SearchBar>
   )
 }
 
 export default Search
+
+const SearchBar= styled.div`
+   
+
+  width: 90%;
+  height: 180px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+ 
+
+.select{
+  display: flex;
+  flex-direction: column;
+ width: 200px;
+row-gap: 10px;
+}
+
+.submit{
+ background-color:#2290af;
+  border: none;
+  color: #fff;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+      
+       
+  width: 90%;
+  height: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+text-align:left;
+.submit{
+ background-color:#2290af;
+  border: none;
+  color: #fff;
+  width: 250px;
+  height: 45px;
+  border-radius: 5px;
+}
+    }
+   
+
+`
+
