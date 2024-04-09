@@ -83,7 +83,7 @@ const [childd, setChildd] = useState(1);
         <img className='room' src='https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?q=80&w=2660&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='room'/>
             <p> Whether you're seeking a romantic getaway or a well-deserved escape, our Delux Room Villa offers an unparalleled experience that promises to exceed your every expectation. Treat yourself to luxury redefined and embark on a journey of unparalleled indulgence at our esteemed resort </p>
         </div>
-<div className='room-details'>
+<div id="room-details-reverse" className='room-details'>
 <p> Pamper yourself in the lavish ensuite bathroom, complete with a luxurious bathtub and rejuvenating rain shower, where you can indulge in moments of relaxation and rejuvenation</p>
 <img className='room' src='https://images.unsplash.com/photo-1533759413974-9e15f3b745ac?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='room'/>
 </div>
@@ -141,13 +141,13 @@ const [childd, setChildd] = useState(1);
         <div className='second-search-bar'>
 
 
-<div className='select'>
+<div className='select-in'>
 <label>Departure</label>
-  <input type='date' placeholder='Select a date '/>
+  <input className='select-input' type='date' placeholder='Select a date '/>
 </div>
-<div className='select'>
+<div className='select-in'>
   <label> Arrival</label>
-  <input type='date' placeholder='Select A date'/>
+  <input className='select-input' type='date' placeholder='Select A date'/>
 </div>
 
 

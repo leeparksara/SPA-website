@@ -138,43 +138,43 @@ const [childd, setChildd] = useState(0);
      
      )}
      {showHiddenDiv && (
-        <div className='bar'>
+      <div className='bar'>
 
-        <div className='second-search-bar'>
+<div className='second-search-bar'>
 
 
-<div className='select'>
+<div className='select-in'>
 <label>Departure</label>
-  <input type='date' placeholder='Select a date '/>
+<input className='select-input' type='date' placeholder='Select a date '/>
 </div>
-<div className='select'>
-  <label> Arrival</label>
-  <input type='date' placeholder='Select A date'/>
+<div className='select-in'>
+<label> Arrival</label>
+<input className='select-input' type='date' placeholder='Select A date'/>
 </div>
 
 
 
 <div className='select'>
 <label>Adult</label>
-  <div className='quantity-input'>
-  
-  <button  id='decreament' onClick={handleDecrement}>-</button>
-  <input className='adult-input' type='text' value={adults} readOnly/>
-    <button id='increment' onClick={handleIncrement}>+</button>
-  </div>
+<div className='quantity-input'>
+
+<button  id='decreament' onClick={handleDecrement}>-</button>
+<input className='adult-input' type='text' value={adults} readOnly/>
+<button id='increment' onClick={handleIncrement}>+</button>
+</div>
 </div>
 <div className='select'>
 <label>Child</label>
-  <div className='quantity-input'>
-  <button id='decreament' onClick={handleChilddDec}>-</button>
-  <input className='adult-input' type='text' value={childd} readOnly/>
-    <button id='increment' onClick={ handleChildd }>+</button>
-  </div>
+<div className='quantity-input'>
+<button id='decreament' onClick={handleChilddDec}>-</button>
+<input className='adult-input' type='text' value={childd} readOnly/>
+<button id='increment' onClick={ handleChildd }>+</button>
+</div>
 </div>
 
 </div>
 <input className='second-submit' type='submit' value='Check Availibilty'/>
-        </div>
+</div>
      )}
     </div>
   );
