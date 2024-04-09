@@ -1060,8 +1060,33 @@ color: #3badcc;
 }
   
 
+.image-slider img{
+    width: 70%;
+   
+}
+.image-slider{
+    overflow: hidden;
+}
+.slides{
+ 
+margin-left: 0;
 
-     
 }
 
+
+.spa-wrapp h1{
+    font-size: 25px;
+}
+.spa-wrapp h2{
+    font-size: 25px;
+}
+
+.image-slider .spa-text{
+    width: 330px;
+}
+.spa-wrapp h1{
+   margin-top: 150px;
+    
+}
+}
 
