@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -9,7 +9,6 @@ const SliderComponent = (props) => {
         'https://images.unsplash.com/photo-1615722440048-da4ccf6de048?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-     
     ];
 
     const slides = [
@@ -36,6 +35,21 @@ const SliderComponent = (props) => {
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // Adjust this value as per your design needs
+        };
+
+        handleResize(); // Call once to set the initial state
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const nextClickEvent = () => {
         setCurrentImageIndex((currentImageIndex + 1) % slides.length);
@@ -52,7 +66,7 @@ const SliderComponent = (props) => {
                 <span className='first-line'> </span>
                 <span className='second-line'> </span>
             </div>
-            <div className="mySlide">
+            <div className={`mySlide ${isMobile ? 'mobile-view' : ''}`}>
                 <div>
                     <img
                         src={images[currentImageIndex]}
@@ -64,17 +78,19 @@ const SliderComponent = (props) => {
                         <Link to={slides[currentImageIndex].link} className='btn'>Discover <FaLongArrowAltRight /></Link>
                     </div>
                 </div>
-                <div>
-                    <img
-                        src={images[(currentImageIndex + 1) % slides.length]}
-                        alt="slider"
-                    />
-                    <div className="slideInfo">
-                        <h4>{slides[(currentImageIndex + 1) % slides.length].title}</h4>
-                        <p>{slides[(currentImageIndex + 1) % slides.length].description}</p>
-                        <Link to={slides[(currentImageIndex + 1) % slides.length].link} className='btn'>Discover <FaLongArrowAltRight /></Link>
+                {!isMobile && (
+                    <div>
+                        <img
+                            src={images[(currentImageIndex + 1) % slides.length]}
+                            alt="slider"
+                        /> 
+                        <div className="slideInfo">
+                            <h4>{slides[(currentImageIndex + 1) % slides.length].title}</h4>
+                            <p>{slides[(currentImageIndex + 1) % slides.length].description}</p>
+                            <Link to={slides[(currentImageIndex + 1) % slides.length].link} className='btn'>Discover <FaLongArrowAltRight /></Link>
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
             <div className="buttons">
                 <IoIosArrowBack className="arrow" onClick={previousClickEvent} />

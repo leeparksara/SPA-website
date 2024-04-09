@@ -249,7 +249,7 @@ row-gap: 10px;
 }
 
 .sliderContainer {
-    display: flex;
+    display: f;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -705,7 +705,7 @@ width: 100%;
     overflow: hidden;
     text-align: center;
     font-family: "Work Sans";
-    position: relative; /* Change fixed to relative */
+    position: relative; 
     bottom: 0;
     left: 0;
 }
@@ -1036,8 +1036,32 @@ color: #3badcc;
       
         font-weight:normal;
         font-size: 15px;
-       
+
     }
+   
+
+   
+   
+.footer-container {
+    display: grid;
     
 
+
+    
 }
+
+.footer{
+  display: grid;
+
+   height: 600px;
+
+   align-items: center;
+    
+}
+  
+
+
+     
+}
+
+
