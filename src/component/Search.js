@@ -48,7 +48,7 @@ const SearchBar= styled.div`
 
   width: 90%;
   height: 180px;
-  background-color: #ffffff;
+  background-color: #ebebeb;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -63,10 +63,10 @@ row-gap: 10px;
 }
 
 .submit{
- background-color:#2290af;
+  background-color:#2da6c4;
   border: none;
   color: #fff;
-  width: 110px;
+  width: 140px;
   height: 50px;
   border-radius: 5px;
 }
@@ -75,7 +75,7 @@ row-gap: 10px;
        
   width: 90%;
   height: 400px;
-  background-color: #ffffff;
+
   display: flex;
   flex-direction:column;
   justify-content: space-around;
@@ -83,9 +83,7 @@ row-gap: 10px;
   border-radius: 10px;
 text-align:left;
 .submit{
- background-color:#2290af;
-  border: none;
-  color: #fff;
+ 
   width: 250px;
   height: 45px;
   border-radius: 5px;

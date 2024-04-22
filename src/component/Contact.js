@@ -1,19 +1,16 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-//import Booking from './Booking.tsx'
-//import outdoor from '../outdoor.json'
 import styled from 'styled-components'
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-// Simple contact form is created with html and css
-// Using local json file again to fetch the titles when user wants to select a spa type during booking
+
 function Contact() {
    
     const [showHiddenDiv, setShowHiddenDiv] = useState(false);
     const handleScroll = () => {
         const scrollY = window.scrollY;
-        // Adjust the threshold value based on when you want the hidden div to appear
+
         if (scrollY > 15) {
           setShowHiddenDiv(true);
         } else {
@@ -40,7 +37,7 @@ function Contact() {
        
     return (
         <Wrap className='wrap'>
-        <h1> Contact Us </h1>
+        <h1 className='contact-title'> Contact Us </h1>
         <IoIosArrowDown className='discover-arrow' onClick={handleArrowClick} />
             {showHiddenDiv && (
                 <div className='contact-container'>
@@ -126,6 +123,7 @@ width:400px;
         padding: 2%;
         column-gap: 15px;
         text-align:left;
+       
         
     }
     input, select{
@@ -158,13 +156,13 @@ width:400px;
     }
     .form-sub input {
         
-        border: none;
+        border: 1px solid #fff;
         border-radius: 3px;
-        width: 80px;
+        width: 140px;
         font-size: large;
-        padding: 10px;
+        padding:5px;
         color: white;
-        margin-left:180px;
+        margin-left:100px;
     }
     
     h1{
@@ -172,4 +170,84 @@ width:400px;
       margin-top:15%;
 
     }
+    @media (max-width: 768px) {
+        .con{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+  
+    column-gap: 0;
+    
+}
+.contact-container{
+    overflow-x: hidden;
+    width: 100%;
+   
+}
+
+input, select{
+       width:300px;
+    }
+    .contact-container {
+    display:flex;
+    flex-direction:column;
+
+   
+}
+.contact-container .hot-spot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:0;
+    margin-top:20px;
+    margin-bottom:30px;
+overflow-x: hidden;
+ 
+  
+}
+.hot-spot h3{
+    font-size: 22px;
+  
+}
+.contactt{
+    display: flex;
+    flex-direction: column;
+  margin-left: 11%;
+overflow-x: hidden;
+ 
+}
+.form-sub input {
+    
+      text-align:center;
+      margin:0;
+      width:300px;
+      
+
+    }
+    .form-sub{
+       display:flex;
+   
+       align-items:center;
+       align-content:center;
+  margin-left:10px;
+      
+    }
+    .form-container{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin-left:-10px;
+    
+    }
+    .contact-title{
+       
+        color:#fff;
+      margin-top:23%;
+
+    
+    }
+    }
+   
 `

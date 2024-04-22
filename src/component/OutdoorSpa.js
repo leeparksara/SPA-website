@@ -15,6 +15,7 @@ const OutdoorSpa = () => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === outdoor.length - 1 ? 0 : prevIndex + 1));
+    
   };
 
   const handleScroll = () =>{
@@ -66,10 +67,10 @@ window.scrollTo({
  <div className='buttons'>
 
  <button
-                onClick={handlePrev}
-        
-              ></button>
-        <button onClick={handleNext}></button>
+                onClick={handlePrev}  >  </button>
+         <button onClick={handleNext} >
+     
+      </button>
  </div>
    </div>
    

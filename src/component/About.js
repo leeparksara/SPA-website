@@ -3,6 +3,9 @@ import React, {useState, useEffect} from 'react'
 import bell from './images/bell.png'
 import bar from './images/bar.png'
 import car from './images/car.png'
+import wine from './images/wine.webp'
+import pool from './images/pool.webp'
+import food from './images/food.webp'
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -31,7 +34,7 @@ const [childd, setChildd] = useState(1);
   }, []);
 
   const handleArrowClick = () => {
-    // Scroll down to reveal the hidden div
+    // Scroll down to display the hidden div
     window.scrollTo({
       top: window.innerHeight,
       behavior: 'smooth', // Add smooth scrolling effect
@@ -78,7 +81,7 @@ const [childd, setChildd] = useState(1);
 
       {showHiddenDiv && (
        
-         <><div>
+         <><div className='ab'>
                  <div className='about-intro'>
 
                     <div className='about-text'>
@@ -96,9 +99,18 @@ const [childd, setChildd] = useState(1);
 
                     </div>
 
+                    <div className='about-images'>
+                <img src={wine} alt='wine' />
+                <img src={pool} alt=' pool'/>
+                <img src={food} alt='food' />
+                  
+                 </div>
 
                  </div>
-              </div><div className='sections'>
+
+              </div>
+              
+              <div className='sections'>
                     <div>
 
                        <img src={bell} alt='bell' />
@@ -126,43 +138,43 @@ const [childd, setChildd] = useState(1);
       )}
      
      {showHiddenDiv && (
-        <div className='bar'>
+      <div className='bar'>
 
-        <div className='second-search-bar'>
+<div className='second-search-bar'>
 
 
-<div className='select'>
+<div className='select-in'>
 <label>Departure</label>
-  <input type='date' placeholder='Select a date '/>
+<input className='select-input' type='date' placeholder='Select a date '/>
 </div>
-<div className='select'>
-  <label> Arrival</label>
-  <input type='date' placeholder='Select A date'/>
+<div className='select-in'>
+<label> Arrival</label>
+<input className='select-input' type='date' placeholder='Select A date'/>
 </div>
 
 
 
 <div className='select'>
 <label>Adult</label>
-  <div className='quantity-input'>
-  
-  <button  id='decreament' onClick={handleDecrement}>-</button>
-  <input className='adult-input' type='text' value={adults} readOnly/>
-    <button id='increment' onClick={handleIncrement}>+</button>
-  </div>
+<div className='quantity-input'>
+
+<button  id='decreament' onClick={handleDecrement}>-</button>
+<input className='adult-input' type='text' value={adults} readOnly/>
+<button id='increment' onClick={handleIncrement}>+</button>
+</div>
 </div>
 <div className='select'>
 <label>Child</label>
-  <div className='quantity-input'>
-  <button id='decreament' onClick={handleChilddDec}>-</button>
-  <input className='adult-input' type='text' value={childd} readOnly/>
-    <button id='increment' onClick={ handleChildd }>+</button>
-  </div>
+<div className='quantity-input'>
+<button id='decreament' onClick={handleChilddDec}>-</button>
+<input className='adult-input' type='text' value={childd} readOnly/>
+<button id='increment' onClick={ handleChildd }>+</button>
+</div>
 </div>
 
 </div>
 <input className='second-submit' type='submit' value='Check Availibilty'/>
-        </div>
+</div>
      )}
     </div>
     </>

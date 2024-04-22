@@ -5,7 +5,9 @@ import {  useLocation } from 'react-router-dom';
 import SliderComponent from './SliderComponent';
 
 import Search from './Search';
-import video from './images/video.mp4';
+
+import sea2 from './images/sea2.mp4'
+
 import '../App.css';
 
 function CoverImage() {
@@ -18,8 +20,8 @@ function CoverImage() {
       <div className="background">
         {isHomePage && (
           <video
-            src={video}
-            type="video/mp4"
+            src={sea2}
+            type="sea2/mp4"
             autoPlay
             loop
             muted
