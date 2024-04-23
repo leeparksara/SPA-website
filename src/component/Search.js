@@ -74,8 +74,9 @@ row-gap: 10px;
       
        
   width: 90%;
-  height: 400px;
-
+  height: 440px;
+padding-bottom:40px;
+padding-top:20px;
   display: flex;
   flex-direction:column;
   justify-content: space-around;
