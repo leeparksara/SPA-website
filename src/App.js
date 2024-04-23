@@ -14,15 +14,17 @@ import OneBedRoom from './component/OneBedRoom';
 import TwoBedRoom from './component/TwoBedRoom';
 function App() {
   return (
-    <div className="app-container">
+    <div className="app-container"> 
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/outdoorspa" element={<OutdoorSpa />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 <Route path='/table' element={<Table/>} />
 <Route path='/search' element={<Search/>} />
-        <Route path="/outdoorspa" element={<OutdoorSpa />} />
+
         <Route path="/discover" element={<Discover />} />
         <Route path="/delux" element={<Delux />} />
      
