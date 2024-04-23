@@ -1,19 +1,19 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Table from './Table';
-import SliderContext from './SliderContext';
+//import SliderContext from './SliderContext';
 
 function NavBar() {
-    const { setShowSlider } = useContext(SliderContext);
+    //const { setShowSlider } = useContext(SliderContext);
     const [showBookingForm, setShowBookingForm] = useState(false);
 
-    const linkClickEvent = () => {
+   /* const linkClickEvent = () => {
         setShowSlider(false);
-    };
+    }; */
 
     const openBookingForm = () => {
         setShowBookingForm(true);
@@ -32,16 +32,16 @@ function NavBar() {
                 <Navbar.Toggle className='toggle' aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/" onClick={linkClickEvent}>
+                        <Nav.Link as={Link} to="/" >
                             Home
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/outdoorspa" onClick={linkClickEvent}>
+                        <Nav.Link as={Link} to="/outdoorspa" >
                             Spa
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/about" onClick={linkClickEvent}>
+                        <Nav.Link as={Link} to="/about" >
                             About Us
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/contact" onClick={linkClickEvent}>
+                        <Nav.Link as={Link} to="/contact" >
                             Contact
                         </Nav.Link>
                     </Nav>
